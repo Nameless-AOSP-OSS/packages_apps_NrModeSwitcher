@@ -1,0 +1,35 @@
+//
+//   Copyright (C) 2023 Nameless-AOSP
+//   SPDX-License-Identifier: Apache-2.0
+//
+android_app {
+    name: "NrModeSwitcher",
+    certificate: "platform",
+    defaults: ["SettingsLibDefaults"],
+    optimize: {
+        proguard_flags_files: ["proguard.flags"],
+    },
+    platform_apis: true,
+    privileged: true,
+    required: [
+        "privapp_whitelist_nrmode",
+    ],
+    srcs: [
+        "src/**/*.java",
+        "src/**/*.kt",
+    ],
+    system_ext_specific: true,
+    static_libs: [
+        "android.hidl.manager-V1.0-java",
+        "androidx.core_core",
+        "androidx.preference_preference",
+    ],
+}
+   
+prebuilt_etc {
+    name: "privapp_whitelist_nrmode",
+    sub_dir: "permissions",
+    src: "privapp-permissions-org.nameless.nrmode.xml",
+    filename_from_src: true,
+    system_ext_specific: true,
+}

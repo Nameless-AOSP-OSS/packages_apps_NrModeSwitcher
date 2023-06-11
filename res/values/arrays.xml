@@ -1,0 +1,23 @@
+<!--
+     Copyright (C) 2023 Nameless-AOSP
+     SPDX-License-Identifier: Apache-2.0
+-->
+<resources>
+
+    <string-array name="nr_mode_entries" translatable="false">
+        <item>@string/nr_mode_auto</item>
+        <item>@string/nr_mode_nsa_only</item>
+        <item>@string/nr_mode_nsa_preferred</item>
+        <item>@string/nr_mode_sa_only</item>
+        <item>@string/nr_mode_sa_preferred</item>
+    </string-array>
+
+    <string-array name="nr_mode_values" translatable="false">
+        <item>4</item>
+        <item>1</item>
+        <item>0</item>
+        <item>2</item>
+        <item>3</item>
+    </string-array>
+
+</resources>
